@@ -10,11 +10,9 @@ public class ExIfElseStatement {
 
         if(sex.equals("F")){
             System.out.println("You will work in urban ares");
-        }
-        else if (sex.equals("M") && (age >= 20 && age <= 40)){
+        } else if (sex.equals("M") && (age >= 20 && age <= 40)){
             System.out.println("You may work anyware");
-        }
-        else if (sex.equals("M") && (age >= 40 && age <= 60)){
+        } else if (sex.equals("M") && (age >= 40 && age <= 60)){
             System.out.println("You will work in urban areas only");
         }else if(age > 60){
             System.out.println("ERROR");
