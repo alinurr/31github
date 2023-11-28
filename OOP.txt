@@ -1,0 +1,19 @@
+OOP Principles
+super() - is used in subclass to access superclass members like methods, attributes, construstors 
+
+Overload
+methods with the same name but with different number of parameters or different types of parameters
+used to increase readability of program
+prevents to writing different methods for the same functionality
+
+Abstract class and method
+Abstract method doesn't have body
+Abstraction is used to hide unnecessary details and show the needed information  
+Abstract class cannot create objects
+
+Interface like abstract classes doesn't have implemetation
+It has abstract methods
+It may have default method with implementation, it used when something is general
+Interface can extend other interfaces
+
+
