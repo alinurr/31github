@@ -32,7 +32,7 @@ public class Game {
             if (userPick.equals("rock") || userPick.equals("paper") || userPick.equals("scissors")){
                 break;
             }
-            return userPick;
         }
+        return userPick;
     }
 }
