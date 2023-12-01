@@ -1,5 +1,7 @@
 package OOP;
 
+import java.util.Scanner;
+
 public class Game {
     String userPick;
     String computerPick;
@@ -17,5 +19,20 @@ public class Game {
             computerPick = "scissors";
         }
         return computerPick;
+    }
+
+    String getUserPick(){
+        Scanner input = new Scanner(System.in);
+        String userPick;
+
+        while (true){
+            System.out.println("Enter rock, paper or scissors:");
+            userPick = input.nextLine();
+
+            if (userPick.equals("rock") || userPick.equals("paper") || userPick.equals("scissors")){
+                break;
+            }
+            return userPick;
+        }
     }
 }
