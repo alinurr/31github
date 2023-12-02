@@ -35,4 +35,18 @@ public class Game {
         }
         return userPick;
     }
+
+    String getResult(String userPick, String computerPick){
+        if(userPick.equals(computerPick)){
+            return "draw";
+        } else if (userPick.equals("paper") && computerPick.equals("rock")) {
+            return "win";
+        } else if (userPick.equals("rock") && computerPick.equals("scissors")) {
+            return "win";
+        } else if (userPick.equals("scissors") && computerPick.equals("paper")) {
+            return "win";
+        }else{
+            return "lose";
+        }
+    }
 }
