@@ -1,4 +1,6 @@
 OOP Principles
+
+Polymorphism allows us to perform different tasks with the same entity(methods, operators)
 super() - is used in subclass to access superclass members like methods, attributes, construstors 
 
 Overload
