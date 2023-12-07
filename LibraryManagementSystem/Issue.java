@@ -21,20 +21,30 @@ public class Issue {
         System.out.println("Enter a book: ");
         String bookName = input.nextLine();
 
-        if(b1.book.containsValue(bookName)){
+        if(b1.book.containsValue(bookName)) {
             int bookId = 0;
 
-            for(Entry<Integer,String> entry : b1.book.entrySet()){
-                if(entry.getValue().equals(bookName)){
+            for (Entry<Integer, String> entry : b1.book.entrySet()) {
+                if (entry.getValue().equals(bookName)) {
                     bookId = entry.getKey();
                     break;
                 }
             }
 
             b1.book.remove(bookId);
-            issue.put(id,bookName);
+            issue.put(id, bookName);
 
-
+            String name = s1.student.get(id);
+            System.out.println("Name: " + name);
+            System.out.println("Book: " + bookName);
+            System.out.println("Book issued Congratulation");
         }
+            else {
+                System.out.println("Book doesn't exist");
+                System.out.println("We have following Books:");
+                System.out.println(b1.book);
+            }
+
     }
 }
+
