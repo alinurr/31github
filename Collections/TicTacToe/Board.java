@@ -26,5 +26,19 @@ public class Board {
         System.out.println(" " + board.get(6) + " | " + board.get(7) + " | " + board.get(8));
     }
 
+    boolean updateBoard(int position, String type){
+        boolean returnValue;
+
+        if (board.get(position - 1).equals(" ")){
+            board.set(position - 1, type);
+
+            returnValue = true;
+        }else {
+            System.out.println("Position already selected. Select another position");
+            returnValue = false;
+        }
+        return returnValue;
+    }
+
 
 }
