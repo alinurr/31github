@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Board {
 
+    int count = 0;
     ArrayList<String> board = new ArrayList<>();
     void addElements(){
         board.add(" ");
@@ -38,6 +39,14 @@ public class Board {
             returnValue = false;
         }
         return returnValue;
+    }
+
+    boolean checkDraw(){
+        if (count == 9){
+            return true;
+        }else {
+            return false;
+        }
     }
 
 
