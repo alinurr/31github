@@ -23,10 +23,18 @@ public class Game {
             if (b1.updateBoard(position, currentPlayer.type)){
                 b1.printBoard();
 
-                if (currentPlayer == player1){
-                    currentPlayer = player2;
+                if(b1.checkWinner(currentPlayer.type)){
+                    System.out.println(currentPlayer.name + " wins");
+                    break;
+                } else if (b1.checkDraw()) {
+                    System.out.println("Game is a draw!");
+                    break;
                 }else {
-                    currentPlayer = player1;
+                    if (currentPlayer == player1){
+                        currentPlayer = player2;
+                    }else {
+                        currentPlayer = player1;
+                    }
                 }
             }
         }

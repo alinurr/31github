@@ -33,6 +33,7 @@ public class Board {
         if (board.get(position - 1).equals(" ")){
             board.set(position - 1, type);
 
+            count++;
             returnValue = true;
         }else {
             System.out.println("Position already selected. Select another position");
@@ -49,5 +50,18 @@ public class Board {
         }
     }
 
-
+    boolean checkWinner(String type){
+        if((board.get(0).equals(type) && board.get(1).equals(type) && board.get(2).equals(type))
+                || (board.get(3).equals(type) && board.get(4).equals(type) && board.get(5).equals(type))
+                || (board.get(6).equals(type) && board.get(7).equals(type) && board.get(8).equals(type))
+                || (board.get(0).equals(type) && board.get(3).equals(type) && board.get(6).equals(type))
+                || (board.get(0).equals(type) && board.get(4).equals(type) && board.get(8).equals(type))
+                || (board.get(1).equals(type) && board.get(4).equals(type) && board.get(7).equals(type))
+                || (board.get(2).equals(type) && board.get(5).equals(type) && board.get(8).equals(type))
+                || (board.get(2).equals(type) && board.get(4).equals(type) && board.get(6).equals(type))){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
